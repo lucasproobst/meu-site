@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolução dos Treinos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Evolução dos Treinos</h1>
+
+                <h2>Medidas Corporais</h2>
+                <ul>
+                    {% for medida in medidas %}
+                    <li>ID: {{ medida.id }}</li>
+                    <li>Medida Bíceps PD: {{ medida.medida_biceps_pd }}</li>
+                    <li>Medida Bíceps PE: {{ medida.medida_biceps_pe }}</li>
+                    <li>Medida Tríceps PD: {{ medida.medida_triceps_pd }}</li>
+                    <li>Medida Tríceps PE: {{ medida.medida_triceps_pe }}</li>
+                    <li>Medida Antebraço PD: {{ medida.medida_antebraco_pd }}</li>
+                    <li>Medida Antebraço PE: {{ medida.medida_antebraco_pe }}</li>
+                    <li>Medida Coxa PD: {{ medida.medida_coxa_pd }}</li>
+                    <li>Medida Coxa PE: {{ medida.medida_coxa_pe }}</li>
+                    <li>Medida Panturrilha PD: {{ medida.medida_panturilha_pd }}</li>
+                    <li>Medida Panturrilha PE: {{ medida.medida_panturilha_pe }}</li>
+                    <li>Medida Quadril: {{ medida.medida_quadril }}</li>
+                    <li>Medida Abdome: {{ medida.medida_abdome }}</li>
+                    <li>Medida Costas: {{ medida.medida_costas }}</li>
+                    <li>Medida Cintura: {{ medida.medida_cintura }}</li>
+                    <br>
+                    {% endfor %}
+                </ul>
+
+                <h2>Gráficos de Evolução</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Gráfico de Medidas dos Braços</h3>
+                        <canvas id="graficoMedidasBracos"></canvas>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Gráfico de Medidas das Pernas</h3>
+                        <canvas id="graficoMedidasPernas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

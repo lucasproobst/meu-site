@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Treinos Selecionados</title>
+</head>
+<body>
+    <h1>Treinos Selecionados</h1>
+    {% for category, exercises in selected_trainings.items() %}
+        <h2>{{ category }}</h2>
+        <ul>
+            {% for exercise in exercises %}
+                <li>{{ exercise }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    <a href="{{ url_for('criar_treino') }}">Voltar</a>
+</body>
+</html>

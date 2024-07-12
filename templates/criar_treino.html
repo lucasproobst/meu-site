@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/feather-icon/css/feather.css">
+
+    <title>Dashboard</title>
+</head>
+
+<header>
+    <div class="navbar">
+        <ul>
+            <li><a href="{{ url_for('logout') }}"><i class="feather icon-home"></i></a></li>
+            <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
+            <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
+            <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
+            <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+            <li><a href="{{ url_for('logout') }}"><i class="feather icon-log-out"></i></a></li>
+            
+        </ul>
+    </div>
+</header>
+
+
+<body>
+   
+<div class="perguntas">
+    <h6>teste</h6>
+    <div class="perguntas-frequentes">
+        <form action="">
+            <details class="accordion-details">
+                <summary class="accordion-summary feather d-flex">
+                    <p class="text-lg semibold text-start"><i
+                            class="feather icon-box strong-cereja semibold"></i>Peito</p>
+                </summary>
+                <div class="details-content asfalto-400">
+                    <label>
+                        <input type="checkbox">
+                        Supino Reto
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Supino Inclinado
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Crucifixo
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Flexão de Braço
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Pull Over
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Peck Deck
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Supino Declinado
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Cross Over
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Flexão Diamante
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Supino com Halteres
+                    </label>
+                </div>
+            </details>
+            <div class="linha"></div>
+            <details class="accordion-details">
+                <summary class="accordion-summary feather">
+                    <p class="text-lg semibold text-start"><i
+                            class="feather icon-box strong-cereja semibold"></i>Costas</p>
+                </summary>
+                <div class="details-content asfalto-400">
+                    <label>
+                        <input type="checkbox">
+                        Remada Curvada
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Puxada Frontal
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Remada Unilateral
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Levantamento Terra
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Barra Fixa
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Pulldown
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Remada Cavalinho
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Puxada Inversa
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Remada Alta
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Pullover Costas
+                    </label>
+                </div>
+            </details>
+            <div class="linha"></div>
+            <details class="accordion-details">
+                <summary class="accordion-summary feather">
+                    <p class="text-lg semibold text-start"><i
+                            class="feather icon-box strong-cereja semibold"></i>Ombros</p>
+                </summary>
+                <div class="details-content asfalto-400">
+                    <label>
+                        <input type="checkbox">
+                        Desenvolvimento com Halteres
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Elevação Lateral
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Elevação Frontal
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Desenvolvimento Arnold
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Encolhimento
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Elevação Lateral Inclinado
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Elevação Posterior
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Desenvolvimento Militar
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Crucifixo Invertido
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Press Arnold
+                    </label>
+                </div>
+            </details>
+            <div class="linha"></div>
+            <details class="accordion-details">
+                <summary class="accordion-summary feather">
+                    <p class="text-lg semibold text-start"><i
+                            class="feather icon-box strong-cereja semibold"></i>Braços</p>
+                </summary>
+                <div class="details-content asfalto-400">
+                    <label>
+                        <input type="checkbox">
+                        Rosca Direta
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Rosca Martelo
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Tríceps Testa
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Tríceps Pulley
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Rosca Concentrada
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Rosca Scott
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Rosca Inversa
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Tríceps Corda
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Rosca Alternada
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Tríceps Francês
+                    </label>
+                </div>
+            </details>
+            <div class="linha"></div>
+            <details class="accordion-details">
+                <summary class="accordion-summary feather">
+                    <p class="text-lg semibold text-start"><i
+                            class="feather icon-box strong-cereja semibold"></i>Abdômen</p>
+                </summary>
+                <div class="details-content asfalto-400">
+                    <label>
+                        <input type="checkbox">
+                        Crunch
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Abdominal Reverso
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Prancha
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Bicicleta no Ar
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Elevação de Pernas
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Russian Twist
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Abdominal Oblíquo
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Abdominal com Bola
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Abdominal V-up
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Abdominal Infra
+                    </label>
+                </div>
+
+
+
+
+            </details>
+            <div class="linha"></div>
+            <details class="accordion-details">
+                <summary class="accordion-summary feather">
+                    <p class="text-lg semibold text-start"><i
+                            class="feather icon-box strong-cereja semibold"></i>Pernas</p>
+                </summary>
+                <div class="details-content asfalto-400">
+                    <label>
+                        <input type="checkbox">
+                        Agachamento Livre
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Leg Press
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Afundo
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Extensão de Pernas
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Flexão de Pernas
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Stiff
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Levantamento Terra
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Agachamento Sumô
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Passada
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Panturrilha em Pé
+                    </label>
+                </div>
+            </details>
+
+            <button class="btn-cereja">Criar Treino</button>
+        </form>
+    </div>
+</div>
+
+
+</body>
+<footer>
+    <h6 class="color-white">Fale com um de nossos profissionais</h5>
+    <div class="grid-profissionais">
+        <div class="profissional">
+            <h6>
+                <a href="https://wa.me/5551998786274?text=Olá%20Julio%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos." target="_blank">
+                Julio Balestrin
+                </a>
+            </h6>
+        </div>
+        <div class="profissional">
+            <h6>
+                <a href="https://wa.me/5551998786274?text=Olá%20Renato%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos." target="_blank">
+                Renato Cariri
+                </a>
+            </h6>
+        </div>
+        <div class="profissional">
+            <h6>
+                <a href="https://wa.me/5551998786274?text=Olá%20Jorlan%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos." target="_blank">
+                Jorlan all day
+                </a>
+            </h6>
+        </div>
+        <div class="profissional">
+            <h6>
+                <a href="https://wa.me/5551998786274?text=Olá%20Paulo%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos." target="_blank">
+                Paulo Muzy
+                </a>
+            </h6>
+        </div>
+    </div>
+
+</footer>
+
+</html>
+
+

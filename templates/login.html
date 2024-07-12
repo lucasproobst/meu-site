@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body id="home-login">
+    <div class="container">
+         <div class="home-login">
+            <img src="/static/imgs/lif-it 1.png" alt="Logo" class="logo">
+            <form action="{{ url_for('login') }}" class="form-login" method="POST"> <!-- Ajuste para enviar os dados para a rota de login -->
+                <p>Digite seu e-mail:</p>
+                <input type="email" name="email" placeholder="E-mail"> <!-- Adicionado name="email" para identificar o campo no Flask -->
+                <p>Digite sua senha:</p>
+                <input type="password" name="password" placeholder="Senha"> <!-- Adicionado name="password" para identificar o campo no Flask -->
+                <div class="remember-me">
+                    <p><a href="">Esqueci minha senha.</a></p> 
+                </div>
+                <p>Não possui conta? <a href="{{ url_for('register') }}">Cadastre-se</a></p>
+                <br>
+                <input type="submit" value="Entrar">
+                {% if error %}
+            <p style="color: red;">{{ error }}</p> <!-- Adicionado para exibir mensagens de erro -->
+            {% endif %}
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

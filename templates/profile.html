@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <title>Perfil</title>
+</head>
+
+<header>
+    <div class="navbar">
+        <ul>
+            <li><a href="{{ url_for('logout') }}"><i class="feather icon-home"></i></a></li>
+            <li><a href="{{ url_for('criar_treino') }}">Treino</a></li>
+            <li><a href="{{ url_for('evolucao') }}">Evolução</a></li>
+            <li><a href="{{ url_for('desafios') }}">Desafios</a></li>
+            <li><a href="{{ url_for('profile') }}">Perfil</a></li>
+            <li><a href="{{ url_for('logout') }}"><i class="feather icon-log-out"></i></a></li>
+            
+        </ul>
+    </div>
+</header>
+
+<body>
+    <div class="container">
+        <form id="profileForm" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" value="{{ user[1] }}">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{ user[2] }}">
+            </div>
+            <div class="form-group">
+                <label for="peso">Peso:</label>
+                <input type="number" class="form-control" id="peso" name="peso" value="{{ user[4] }}">
+            </div>
+            <div class="form-group">
+                <label for="altura">Altura (cm):</label>
+                <input type="number" class="form-control" id="altura" name="altura" value="{{ user[5] }}">
+            </div>
+            <div class="form-group">
+                <label for="idade">Idade:</label>
+                <input type="number" class="form-control" id="idade" name="idade" value="{{ user[6] }}">
+            </div>
+            <div class="form-group">
+                <label for="tipo_sanguineo">Tipo Sanguíneo:</label>
+                <input type="text" class="form-control" id="tipo_sanguineo" name="tipo_sanguineo" value="{{ user[7] }}">
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+</body>
+
+<footer>
+    <h6 class="color-white">Fale com um de nossos profissionais</h5>
+        <div class="grid-profissionais">
+            <div class="profissional">
+                <h6>
+                    <a href="https://wa.me/5551998786274?text=Olá%20Julio%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos." target="_blank">
+                    Julio Balestrin
+                    </a>
+                </h6>
+            </div>
+            <div class="profissional">
+                <h6>
+                    <a href="https://wa.me/5551998786274?text=Olá%20Renato%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos." target="_blank">
+                    Renato Cariri
+                    </a>
+                </h6>
+            </div>
+            <div class="profissional">
+                <h6>
+                    <a href="https://wa.me/5551998786274?text=Olá%20Jorlan%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos." target="_blank">
+                    Jorlan all day
+                    </a>
+                </h6>
+            </div>
+            <div class="profissional">
+                <h6>
+                    <a href="https://wa.me/5551998786274?text=Olá%20Paulo%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20treinos." target="_blank">
+                    Paulo Muzy
+                    </a>
+                </h6>
+            </div>
+        </div>
+    <script>
+   document.querySelectorAll('.accordion-details').forEach(details => {
+        const content = details.querySelector('.details-content');
+        
+        details.addEventListener('toggle', (event) => {
+            if (details.open) {
+                // Fecha todos os outros detalhes
+                document.querySelectorAll('.accordion-details').forEach(otherDetails => {
+                    if (otherDetails !== details && otherDetails.open) {
+                        otherDetails.open = false;
+                        otherDetails.querySelector('.details-content').style.maxHeight = 0;
+                    }
+                });
+
+                // Define a altura máxima para iniciar a animação
+                content.style.maxHeight = content.scrollHeight + 'px';
+            } else {
+                // Retarda a redefinição da altura para permitir a animação de fechamento
+                content.style.maxHeight = content.scrollHeight + 'px'; // Inicializa com a altura atual
+                setTimeout(() => {
+                    content.style.maxHeight = 0;
+                }, 10); // Pequeno atraso para permitir a animação
+            }
+        });
+
+        // Garantir que a altura máxima seja correta quando a página é carregada
+        if (details.open) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        }
+    });
+    </script>
+</footer>
+
+</html>
